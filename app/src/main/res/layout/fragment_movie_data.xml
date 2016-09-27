@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewSwitcher xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewSwitcher2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollViewMovie">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#B2DFDB"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text=""
+                android:id="@+id/textViewTitle"
+                android:textSize="30dp"
+                android:foregroundGravity="top"
+                android:gravity="top|start"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:shadowColor="#fff"
+                android:textColor="#000"/>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="138.75dp"
+                android:layout_height="208.5dp"
+                android:id="@+id/imageViewPoster" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/textViewYear"
+                    android:textSize="30dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/textViewRuntime"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text=""
+                    android:id="@+id/textViewRating"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="22dp"
+                    android:textIsSelectable="false" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add to Favorites"
+                    android:id="@+id/buttonFavorite"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@android:drawable/btn_star" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Remove Movie"
+                    android:id="@+id/buttonRemove"
+                    android:layout_gravity="center_horizontal"
+                    android:drawableLeft="@android:drawable/ic_menu_delete"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/textViewPlot"
+            android:layout_gravity="center_horizontal"
+            android:padding="16dp" />
+        <ImageView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:scaleType="fitStart"
+            android:adjustViewBounds="true"
+            android:id="@+id/imageViewCover" />
+
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listViewTrailers"
+            android:layout_gravity="center_horizontal"
+            android:nestedScrollingEnabled="true"
+            android:padding="20dp" />
+
+    </LinearLayout>
+
+</ScrollView>
+
+    <!-- nothing is selected -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical|center_horizontal"
+        android:id="@+id/movieDataEmpty">
+        <ProgressBar
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:id="@+id/movieProgress"
+            />
+    </LinearLayout>
+</ViewSwitcher>
