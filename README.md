@@ -8,10 +8,10 @@ This application is built based on the specification for Udacity's "Devloping An
 - Add TV-Shows with notifications
 
 ## Screenshots:
-![Alt text](screenshot_tablet_portrait.jpeg?raw=true "Tablet Portrait")
-![Alt text](screenshot_tablet_landscape.jpeg?raw=true "Tablet Landscape")
-![Alt text](screenshot_phone_movies_list.png?raw=true "Phone Movies List")
-![Alt text](screenshot_phone_moviie_data.png?raw=true "Phone Movie Data")
+![Alt text](screenshots/screenshot_tablet_portrait_small.png?raw=true "Tablet Portrait")
+![Alt text](screenshots/screenshot_tablet_landscape_small.png?raw=true "Tablet Landscape")
+![Alt text](screenshots/screenshot_phone_movies_list_small.png?raw=true "Phone Movies List")
+![Alt text](screenshots/screenshot_phone_moviie_data_small.png?raw=true "Phone Movie Data")
 
 
 
