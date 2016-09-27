@@ -1,5 +1,14 @@
 apply plugin: 'com.android.application'
 
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile group: 'info.movito', name: 'themoviedbapi', version: '1.4'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:support-v4:24.0.0'
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.0"
@@ -19,6 +28,23 @@ android {
     }
 
     useLibrary 'org.apache.http.legacy'
+
+    packagingOptions {
+        /*
+            After upgrading to Android Studio 2.2, it compiled only after I added these
+            http://stackoverflow.com/questions/20827885/
+         */
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+    }
 }
 
 repositories {
@@ -27,11 +53,7 @@ repositories {
 }
 
 
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    compile group: 'info.movito', name: 'themoviedbapi', version: '1.4'
-    compile 'com.android.support:appcompat-v7:24.0.0'
-    compile 'com.squareup.picasso:picasso:2.5.2'
-    compile 'com.android.support:support-v4:24.0.0'
-}
+
+
+
+
