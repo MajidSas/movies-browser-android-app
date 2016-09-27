@@ -16,5 +16,6 @@ This application is built based on the specification for Udacity's "Devloping An
 ## Usage
 - Import this project to Android Studio (this version is compatible with Android Studio 2.2)
 - Add your TMDB API Key in the strings file:
+
 > MoviesBrowser/app/src/main/res/values/strings.xml
 
